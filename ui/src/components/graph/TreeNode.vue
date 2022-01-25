@@ -106,7 +106,6 @@
     import CodeTags from "vue-material-design-icons/CodeTags";
     import TextBoxSearch from "vue-material-design-icons/TextBoxSearch";
 
-    import {mapState} from "vuex";
     import Status from "../Status";
     import MarkdownTooltip from "../../components/layout/MarkdownTooltip";
     import State from "../../utils/state"
@@ -133,6 +132,11 @@
             SubFlowLink
         },
         props: {
+            itemData: {
+                type: Object,
+                required: true
+            },
+            /*
             n: {
                 type: Object,
                 default: undefined
@@ -149,6 +153,8 @@
                 type: Object,
                 default: undefined
             }
+
+             */
         },
         methods: {
             forwardEvent(type, event) {
@@ -171,10 +177,11 @@
             };
         },
         computed: {
-            ...mapState("graph", ["node"]),
-            ...mapState("auth", ["user"]),
             hash() {
-                return this.n.uid.hashCode();
+                return this.itemData.id.hashCode();
+            },
+            execution() {
+                return this.itemData.execution;
             },
             taskRuns() {
                 return (this.execution && this.execution.taskRunList ? this.execution.taskRunList : [])
@@ -188,7 +195,7 @@
             },
             state() {
                 if (!this.taskRuns) {
-                    return  null;
+                    return null;
                 }
 
                 if (this.taskRuns.length === 1) {
@@ -233,8 +240,14 @@
                     ["bg-" + State.colorClass()[this.state]]: true,
                 };
             },
+            namespace() {
+                return this.itemData.namespace;
+            },
+            flowId() {
+                return this.itemData.flowId;
+            },
             task() {
-                return this.n.task;
+                return this.itemData.task;
             },
         }
     };
