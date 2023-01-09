@@ -1,3 +1,5 @@
+version: "2.3"
+
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper
