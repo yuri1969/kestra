@@ -75,7 +75,7 @@
 }
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .dashboard-card-tooltip {
     width: 300px;
 }

@@ -425,7 +425,7 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @import "../../styles/layout/root-dark.scss";
 
     :not(.namespace-form, .el-drawer__body) > .ks-editor{

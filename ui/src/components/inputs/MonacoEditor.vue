@@ -726,7 +726,7 @@
     }
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @import "../../styles/layout/root-dark.scss";
 
     .custom-dark-vs-theme .monaco-editor .sticky-widget {

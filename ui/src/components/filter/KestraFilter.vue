@@ -478,7 +478,7 @@
     else if (name === "namespaces/update") addNamespaceFilter(params.id);
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @mixin width-available {
     width: -moz-available;
     width: -webkit-fill-available;
@@ -487,7 +487,7 @@
 }
 .filters {
     @include width-available;
-    & .el-select {
+    & :deep(.el-select) {
         flex: 1;
         width: calc(100% - 237px);
         &.settings {
@@ -497,10 +497,10 @@
             max-width: calc(100% - 189px);
         }
     }
-    & .el-select__placeholder {
+    & :deep(.el-select__placeholder) {
         color: var(--bs-gray-700);
     }
-    & .el-select__wrapper {
+    & :deep(.el-select__wrapper) {
         border-radius: 0;
         box-shadow:
             0 -1px 0 0 var(--el-border-color) inset,
@@ -513,14 +513,14 @@
             }
         }
     }
-    & .el-select__selection {
+    & :deep(.el-select__selection) {
         flex-wrap: nowrap;
         overflow-x: auto;
         &::-webkit-scrollbar {
             height: 0px;
         }
     }
-    & .el-button-group {
+    & :deep(.el-button-group) {
         .el-button {
             border-radius: 0;
         }

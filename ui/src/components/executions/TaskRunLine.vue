@@ -390,8 +390,8 @@
     }
 </style>
 
-<style lang="scss">
-.attempt-select > .el-select__wrapper {
+<style lang="scss" scoped>
+:deep(.attempt-select > .el-select__wrapper) {
     height: 100%;
 }
 </style>

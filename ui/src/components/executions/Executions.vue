@@ -989,7 +989,7 @@
 }
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .el-message-box {
     padding: 2rem;
     max-width: initial;

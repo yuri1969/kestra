@@ -217,7 +217,7 @@
     });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 code {
     color: var(--bs-code-color);
 }

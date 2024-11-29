@@ -498,19 +498,19 @@
         }
     };
 </script>
-<style>
+<style lang="scss" scoped>
     .trigger-issue-icon {
         color: var(--bs-warning);
         font-size: 1.4em;
     }
-    .el-table__expanded-cell[class*=cell]{
+    :deep(.el-table__expanded-cell[class*=cell]) {
         padding: 0;
     }
-    .no-expand .el-icon {
+    :deep(.no-expand .el-icon) {
         display: none; /* Hide the expand icon */
     }
 
-    .no-expand .el-table__expand-icon {
+    :deep(.no-expand .el-table__expand-icon) {
         pointer-events: none; /* Disable pointer events */
     }
 </style>

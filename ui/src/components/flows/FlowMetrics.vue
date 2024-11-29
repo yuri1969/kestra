@@ -278,7 +278,7 @@
     };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .navbar-flow-metrics {
     display: flex;
     width: 100%;

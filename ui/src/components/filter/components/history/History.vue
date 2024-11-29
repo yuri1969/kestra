@@ -72,7 +72,7 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .history-dropdown {
     width: 400px;
 }

@@ -324,7 +324,7 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .crud-align {
     display: flex;
     align-items: center;
@@ -350,7 +350,7 @@
         background: var(--card-bg);
     }
 
-    .el-cascader-menu {
+    :deep(.el-cascader-menu) {
         min-width: 300px;
         max-width: 300px;
 
@@ -400,14 +400,14 @@
     }
 
     .actions-buttons {
-        .el-button {
+        :deep(.el-button) {
             margin-left: 0 !important;
             margin-right: 0 !important;
         }
     }
 }
 
-.el-alert.main-error {
+:deep(.el-alert.main-error) {
     background-color: transparent;
     padding: 0.5rem;
 

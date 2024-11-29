@@ -179,7 +179,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .plugins-list {
     &.enhance-readability {
         padding: calc(var(--spacer) * 1.5);

@@ -59,6 +59,10 @@
       "off"
     ],
     "vue/no-deprecated-router-link-tag-prop": "off",
+    "vue/enforce-style-attribute": [
+      "warn",
+      { "allow": ["scoped"] }
+    ],
     "no-unused-vars": [
       "error",
       {

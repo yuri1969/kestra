@@ -1428,7 +1428,7 @@
     }
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .tabs .el-scrollbar__bar.is-horizontal {
         height: 1px !important;
     }

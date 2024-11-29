@@ -210,6 +210,7 @@
     };
 </script>
 
+<!-- eslint-disable vue/enforce-style-attribute -->
 <style lang="scss">
 @use "styles/vendor";
 @use "styles/app";

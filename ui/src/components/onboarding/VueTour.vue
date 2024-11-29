@@ -429,7 +429,7 @@
     });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $background: var(--card-bg);
 $color: var(--bs-heading-color);
 
@@ -460,7 +460,7 @@ $flow-image-size-container: 36px;
     align-items: center;
 }
 
-#app .v-step {
+#app :deep(.v-step) {
     max-width: $step-max-width;
     padding: 2rem;
 

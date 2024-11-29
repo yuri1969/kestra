@@ -14,7 +14,7 @@
     const {t} = useI18n({useScope: "global"});
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .flow-warning-dialog .icon {
     font-size: var(--font-size-lg);
     color: var(--el-color-warning);

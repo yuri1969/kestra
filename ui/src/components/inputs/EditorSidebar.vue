@@ -1032,8 +1032,8 @@
     };
 </script>
 
-<style lang="scss">
-.filter .el-input__wrapper {
+<style lang="scss" scoped>
+.filter :deep(.el-input__wrapper) {
     padding-right: 0px;
 }
 

@@ -44,6 +44,12 @@ export default [
             ],
             "vue/multi-word-component-names": ["off"],
             "vue/no-deprecated-router-link-tag-prop": "off",
+            "vue/enforce-style-attribute": [
+                "error",
+                {
+                    allow: ["scoped"]
+                }
+            ],
             "vue/object-curly-spacing": ["error", "never"],
             "vue/block-order": [
                 "error",

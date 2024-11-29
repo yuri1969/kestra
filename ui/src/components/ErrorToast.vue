@@ -89,9 +89,9 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .error-notification {
-        .el-notification__title {
+        :deep(.el-notification__title) {
             max-width: calc(100% - 15ch);
         }
 

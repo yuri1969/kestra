@@ -100,7 +100,7 @@
     });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .dashboard-dropdown {
     width: 300px;
 }

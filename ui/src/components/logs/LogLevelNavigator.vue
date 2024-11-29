@@ -45,7 +45,7 @@
         }
     };
 </script>
-<style>
+<style lang="scss" scoped>
     .el-select__wrapper.space-between {
         justify-content: space-between;
         cursor: unset;

@@ -55,7 +55,7 @@
         },
     };
 </script>
-<style>
+<style lang="scss" scoped>
     .key-col {
         min-width: 200px;
     }

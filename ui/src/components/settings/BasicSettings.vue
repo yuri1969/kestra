@@ -279,7 +279,7 @@
                     };
                 }).sort((a, b) => a.offset - b.offset),
                 guidedTour: undefined,
-                now: this.$moment(), 
+                now: this.$moment(),
             };
         },
         created() {
@@ -322,7 +322,7 @@
             },
             onTheme(value) {
                 this.pendingSettings.theme = value;
-                Utils.switchTheme(value);            
+                Utils.switchTheme(value);
             },
             updateThemeBasedOnSystem() {
                 if (this.theme === "syncWithSystem") {
@@ -543,7 +543,7 @@
         }
     };
 </script>
-<style>
+<style lang="scss" scoped>
     .el-input-number {
         max-width: 20vw;
     }

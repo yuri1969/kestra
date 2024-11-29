@@ -141,7 +141,7 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $width: 200px;
 $active: #A396FF;
 $system: #5BB8FF;
@@ -168,7 +168,7 @@ $system: #5BB8FF;
     &.system {
         border-color: $system;
 
-        .el-tree-node__content .icon {
+        :deep(.el-tree-node__content) .icon {
             color: $system;
         }
     }
@@ -185,7 +185,7 @@ $system: #5BB8FF;
         border-radius: var(--bs-border-radius-lg);
     }
 
-    .el-tree-node__content {
+    :deep(.el-tree-node__content) {
         height: 2.25rem;
         overflow: hidden;
         background: transparent;

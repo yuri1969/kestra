@@ -89,7 +89,7 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .state-global-charts {
         position: relative;
         height: 100px;

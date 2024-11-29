@@ -57,7 +57,7 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .markdown {
         font-size: v-bind(fontSizeCss);
 

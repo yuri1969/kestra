@@ -105,9 +105,9 @@
                             if(value === "confirm") {
                                 return this.$store
                                     .dispatch("execution/deleteExecution", {
-                                        ...item, 
+                                        ...item,
                                         deleteLogs: deleteLogs.value,
-                                        deleteMetrics: deleteMetrics.value, 
+                                        deleteMetrics: deleteMetrics.value,
                                         deleteStorage: deleteStorage.value
                                     })
                                     .then(() => {
@@ -147,10 +147,10 @@
         }
     };
 </script>
-<style>
+<style lang="scss" scoped>
 @media (max-width: 768px) {
-           
-       
+
+
            #list {
                 display:contents;
                 background-color: blue;
@@ -158,8 +158,8 @@
             #list  li:first-child {
                 grid-row:1;
                 grid-column:1;
-            } 
-          
+            }
+
             #list  li:nth-child(2){
                 grid-row:1;
                 grid-column:2;
@@ -171,7 +171,7 @@
             #list li:nth-child(4){
                 grid-row:2;
                 grid-column:1;
-            }   
+            }
         }
 
 </style>

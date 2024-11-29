@@ -432,10 +432,10 @@
         selectedValue.value !== debugExpression.value;
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .outputs {
-    .el-scrollbar.el-cascader-menu:nth-of-type(-n + 2) ul li:first-child,
-    .values {
+    :deep(.el-scrollbar.el-cascader-menu:nth-of-type(-n + 2) ul li:first-child,
+    .values) {
         pointer-events: none;
         margin: 0.75rem 0 1.25rem 0;
     }
@@ -448,7 +448,7 @@
         border: 1px solid var(--bs-border-color);
     }
 
-    .bordered > .el-collapse-item {
+    :deep(.bordered > .el-collapse-item) {
         margin-bottom: 0px !important;
     }
 
@@ -471,7 +471,7 @@
         background: var(--card-bg);
     }
 
-    .el-cascader-menu {
+    :deep(.el-cascader-menu) {
         min-width: 300px;
         max-width: 300px;
 

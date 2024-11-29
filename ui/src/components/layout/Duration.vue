@@ -92,7 +92,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .duration-tt {
     .tooltip-inner {
         text-align: left;

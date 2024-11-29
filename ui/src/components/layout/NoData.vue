@@ -23,7 +23,7 @@
     const description = computed(() => props.text ?? t("no_data"));
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .el-empty {
     padding-top: 0;
 

@@ -169,7 +169,7 @@
     })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .collapseButton {
         position: absolute;
         top: calc(var(--spacer) * .5);
@@ -186,7 +186,7 @@
             }
         }
 
-        .vsm_collapsed & {
+        :deep(.vsm_collapsed &) {
             top: calc(var(--spacer) * .5);
         }
     }
@@ -226,9 +226,6 @@
             }
         }
 
-
-
-
         span.version {
             transition: 0.2s all;
             white-space: nowrap;
@@ -243,7 +240,7 @@
             }
         }
 
-        .vsm--icon {
+        :deep(.vsm--icon) {
             transition: left 0.2s ease;
             font-size: 1.5em;
             background-color: transparent !important;
@@ -256,18 +253,18 @@
             }
         }
 
-        .vsm--item {
+        :deep(.vsm--item) {
             padding: 0 30px;
             transition: padding 0.2s ease;
         }
 
-        .vsm--child {
+        :deep(.vsm--child) {
             .vsm--item {
                 padding: 0;
             }
         }
 
-        .vsm--link {
+        :deep(.vsm--link) {
             padding: 0.3rem 0.5rem;
             margin-bottom: 0.3rem;
             border-radius: var(--bs-border-radius-lg);
@@ -277,7 +274,7 @@
                 color: var(--bs-white);
             }
 
-            &_disabled {
+            &.disabled {
                 pointer-events: auto;
             }
 
@@ -286,11 +283,11 @@
             }
         }
 
-        .vsm--title span:first-child{
+        :deep(.vsm--title span:first-child) {
             flex-grow: 0;
         }
 
-        .vsm--arrow_default{
+        :deep(.vsm--arrow_default) {
             width: 8px;
             &:before{
                 border-left-width: 1px;
@@ -301,7 +298,7 @@
             }
         }
 
-        .vsm--toggle-btn {
+        :deep(.vsm--toggle-btn) {
             padding-top: 16px;
             padding-bottom: 16px;
             font-size: 20px;
@@ -319,12 +316,11 @@
             }
         }
 
-
-        a.vsm--link_active[href="#"] {
+        :deep(a.vsm--link_active[href="#"]) {
             cursor: initial !important;
         }
 
-        .vsm--dropdown {
+        :deep(.vsm--dropdown) {
             background-color: var(--bs-gray-100);
             border-radius: 4px;
             margin-bottom: calc(.5 * var(--spacer));
@@ -334,11 +330,6 @@
             }
         }
 
-
-        a.vsm--link_active[href="#"] {
-            cursor: initial !important;
-        }
-
         html.dark & {
             background-color: var(--bs-gray-100);
 
@@ -346,7 +337,6 @@
                 background-color: var(--bs-gray-100);
             }
         }
-
 
         .vsm--mobile-bg {
             border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0;
@@ -367,7 +357,7 @@
                 padding-left: 13px;
             }
 
-            .vsm--item {
+            :deep(.vsm--item) {
                 padding: 0 5px;
             }
 
@@ -382,10 +372,9 @@
             }
         }
 
-        .el-tooltip__trigger .lock-icon.material-design-icon > .material-design-icon__svg {
+        :deep(.el-tooltip__trigger .lock-icon.material-design-icon > .material-design-icon__svg) {
             bottom: 0 !important;
             margin-left: 5px;
         }
     }
-
 </style>
