@@ -1,0 +1,8 @@
+id: invalid-task-type
+namespace: io.kestra.tests
+
+tasks:
+  - id: invalidType
+    type: io.kestra.plugin.core.log.log # lower case class name
+    message: test
+    level: DEBUG

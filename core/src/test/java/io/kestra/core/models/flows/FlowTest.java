@@ -158,8 +158,19 @@ class FlowTest {
         assertThat(validate.get().getMessage(), containsString("array: `itemType` cannot be `ARRAY"));
     }
 
+    @Test
+    void taskTypeValidation() {
+        Flow flow = this.parse("flows/invalids/invalid-task-type.yaml");
+        Optional<ConstraintViolationException> validate = modelValidator.isValid(flow);
+
+        assertThat(validate.isPresent(), is(true));
+        assertThat(validate.get().getConstraintViolations().size(), is(1));
+
+        assertThat(validate.get().getMessage(), containsString("invalidType: Type doesn't match the task class. Please, check letter case."));
+    }
+
     // This test is done to ensure the equals is checking the right fields and also make sure the Maps orders don't negate the equality even if they are not the same.
-    // This can happen for eg. in the persistence layer that don't necessarily track LinkedHashMaps original property orders.
+    // This can happen for e.g. in the persistence layer that don't necessarily track LinkedHashMaps original property orders.
     @Test
     void equals() {
         Flow flowA = baseFlow();
