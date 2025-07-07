@@ -29,6 +29,7 @@ import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.annotation.Nullable;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.NonFinal;
@@ -55,6 +56,7 @@ public class Execution implements DeletedInterface, TenantInterface {
     @With
     @Hidden
     @Pattern(regexp = "^[a-z0-9][a-z0-9_-]*")
+    @Size(max = 250, message = "Tenant ID must be at most 250 characters")
     String tenantId;
 
     @NotNull

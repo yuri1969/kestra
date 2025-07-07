@@ -8,9 +8,9 @@ import io.kestra.core.utils.IdUtils;
 import io.micronaut.core.annotation.Introspected;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,13 +29,15 @@ import java.util.Objects;
 public class Dashboard implements HasUID, DeletedInterface {
     @Hidden
     @Pattern(regexp = "^[a-z0-9][a-z0-9_-]*")
+    @Size(max = 250, message = "Tenant ID must be at most 250 characters")
     private String tenantId;
 
     @Hidden
+    @Size(max = 100, message = "Dashboard ID must be at most 100 characters")
     private String id;
 
     @NotNull
-    @NotBlank
+    @Size(min = 1, max = 250, message = "Title must be at 1-250 characters")
     private String title;
 
     private String description;

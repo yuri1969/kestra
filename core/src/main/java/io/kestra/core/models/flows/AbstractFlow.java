@@ -3,7 +3,6 @@ package io.kestra.core.models.flows;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.kestra.core.models.Label;
-import io.kestra.core.models.annotations.PluginProperty;
 import io.kestra.core.models.tasks.WorkerGroup;
 import io.kestra.core.serializers.ListOrMapOfLabelDeserializer;
 import io.kestra.core.serializers.ListOrMapOfLabelSerializer;
@@ -55,6 +54,7 @@ public abstract class AbstractFlow implements FlowInterface {
 
     @Hidden
     @Pattern(regexp = "^[a-z0-9][a-z0-9_-]*")
+    @Size(max = 250, message = "Tenant ID must be at most 250 characters")
     String tenantId;
 
     @JsonSerialize(using = ListOrMapOfLabelSerializer.class)
