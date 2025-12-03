@@ -16,6 +16,7 @@ import io.micronaut.runtime.server.EmbeddedServer;
 import jakarta.inject.Provider;
 import lombok.extern.slf4j.Slf4j;
 import io.kestra.core.utils.Rethrow;
+import org.slf4j.LoggerFactory;
 import picocli.CommandLine;
 
 import java.io.FileInputStream;
@@ -239,6 +240,10 @@ public abstract class AbstractCommand implements Callable<Integer> {
                     run.run();
                 } catch (Exception e) {
                     log.error("Failed to close gracefully!", e);
+                } finally {
+                    LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
+                    // flush logging queues
+                    loggerContext.stop();
                 }
             },
             "command-shutdown"
